@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ Design tokens (v4 way) */
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --color-primary: #06b6d4;
+  --radius-btn: 9999px;
+  --bg-main: theme(colors.gray.900);
+  --text-main: theme(colors.gray.100);
+}
+
+/* ✅ Base styles */
+html {
+  font-family: var(--font-poppins);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* ✅ Components */
+.btn-primary {
+  @apply font-semibold text-white md:mx-0 mx-auto py-3 px-6 flex items-center gap-2;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-btn);
+}
+
+/* ✅ Image effect */
+.aboutImg {
+  @apply relative;
+}
+
+.aboutImg::after {
+  content: '';
+  @apply absolute w-full h-full left-0 top-0 rounded-xl rotate-12 -z-10;
+  background-color: theme(colors.gray.600);
+}
+
+/* ✅ Swiper */
+.swiper-pagination-bullet {
+  @apply bg-white;
+}
+
+/* ✅ Forms */
+input,
+textarea {
+  @apply outline-none rounded-lg p-3;
+  background-color: theme(colors.gray.700);
+  color: var(--text-main);
+}
+
+::placeholder {
+  @apply text-lg text-gray-400;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}

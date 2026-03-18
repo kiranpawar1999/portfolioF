@@ -2,12 +2,9 @@ import React, { useState } from "react";
 
 const Contact = () => {
   const contact_info = [
-    { logo: "mail", text: "kiranpawar6519@gmail.com" },
+    { logo: "mail-outline", text: "kiranpawar6519@gmail.com" },
     { logo: "call-outline", text: "+91 9617617648" },
-    {
-      logo: "location",
-      text: "Indore-452001 M.P, India",
-    },
+    { logo: "location-outline", text: "Indore-452001 M.P, India" },
   ];
 
   const [formData, setFormData] = useState({
@@ -27,18 +24,21 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://portfoliobackend-yw9r.onrender.com/send-email", // ✅ FIXED URL
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await response.json();
       alert(data.message);
 
-      // ✅ Form reset after success
+      // Reset form
       setFormData({
         name: "",
         email: "",
@@ -111,6 +111,7 @@ const Contact = () => {
                 className="flex text-left gap-4 items-center"
               >
                 <div className="min-w-[3.5rem] text-3xl min-h-[3.5rem] flex items-center justify-center text-white bg-cyan-600 rounded-full">
+                  {/* ✅ FIXED ICON */}
                   <ion-icon name={contact.logo}></ion-icon>
                 </div>
                 <p className="md:text-base text-sm break-words">

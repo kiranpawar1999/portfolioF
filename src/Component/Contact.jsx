@@ -23,6 +23,8 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    alert("Button clicked"); 
+
     try {
       const response = await fetch(
         "https://portfoliobackend-yw9r.onrender.com/send-email", // ✅ FIXED URL
@@ -100,12 +102,7 @@ const Contact = () => {
             >
               Send Message
             </button>
-            <button 
-  onClick={() => alert("Working")}
-  className="bg-red-500 text-white p-3"
->
-  Test Button
-</button>
+            
 
           </form>
 

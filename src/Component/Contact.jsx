@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
 const Contact = () => {
-  const contact_info = [
-    { logo: "mail-outline", text: "kiranpawar6519@gmail.com" },
-    { logo: "call-outline", text: "+91 9617617648" },
-    { logo: "location-outline", text: "Indore-452001 M.P, India" },
-  ];
+ const contact_info = [
+  { logo: "mail-outline", text: "kiranpawar6519@gmail.com" },
+  { logo: "call-outline", text: "+91 9617617648" },
+  { logo: "location-outline", text: "Indore-452001 M.P, India" },
+];
 
   const [formData, setFormData] = useState({
     name: "",

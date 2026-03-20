@@ -44,7 +44,9 @@ function About() {
               </h3>
               <p className="text-sm text-gray-400">{item.text}</p>
             </div>
+            
           ))}
+          </div>
         
 
         {/* BUTTON */}
@@ -54,7 +56,7 @@ function About() {
         </button>
         </a>
       </div>
-      </div>
+      
     </section>
   );
 }

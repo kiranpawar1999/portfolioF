@@ -49,7 +49,7 @@ function About() {
 
         {/* BUTTON */}
         <a href="/KIRAN.pdf" download>
-        <button className="btn-primary mt-10">
+        <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-md w-full md:w-fit">
           Check Resume
         </button>
         </a>

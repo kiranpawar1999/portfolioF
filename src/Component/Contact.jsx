@@ -27,7 +27,7 @@ const contact_info = [
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    alert("Button clicked"); 
+    // alert("Button clicked"); 
 
     try {
       const response = await fetch(

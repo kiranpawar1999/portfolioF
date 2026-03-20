@@ -52,7 +52,7 @@ function Hero() {
           />
         </h4>
 
-        <button className="btn-primary mt-8" onClick={scrollToContact}>
+        <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-md w-full md:w-fit" onClick={scrollToContact}>
           Connect with Me
         </button>
 

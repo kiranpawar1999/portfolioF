@@ -45,7 +45,7 @@ function About() {
               <p className="text-sm text-gray-400">{item.text}</p>
             </div>
           ))}
-        </div>
+        
 
         {/* BUTTON */}
         <a href="/KIRAN.pdf" download>
@@ -53,6 +53,7 @@ function About() {
           Check Resume
         </button>
         </a>
+      </div>
       </div>
     </section>
   );

@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import mypic from "../assets/images/mypic.jpeg";
 import Type from "./Type.jsx";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+
 
 const social_media = [
   "logo-instagram",
@@ -8,11 +10,27 @@ const social_media = [
   "logo-linkedin",
 ];
 
-const socialMediaLinks = [
-  "https://www.instagram.com/kiru_6599/",
-  "https://github.com/kiranpawar1999",
-  "https://www.linkedin.com/in/kiran-pawar-9a891214a/",
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+
+const social_links = [
+  { icon: <FaGithub />, link: "https://github.com/" },
+  { icon: <FaLinkedin />, link: "https://linkedin.com/" },
+  { icon: <FaInstagram />, link: "https://instagram.com/" },
 ];
+
+<div className="flex gap-5 mt-5">
+  {social_links.map((item, i) => (
+    <a
+      key={i}
+      href={item.link}
+      target="_blank"
+      rel="noreferrer"
+      className="text-white text-2xl hover:text-cyan-400"
+    >
+      {item.icon}
+    </a>
+  ))}
+</div>
 
 function Hero() {
   const contactRef = useRef(null);

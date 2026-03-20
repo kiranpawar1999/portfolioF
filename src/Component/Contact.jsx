@@ -1,11 +1,15 @@
 import React, { useState } from "react";
+import { MdEmail } from "react-icons/md";
+import { FaPhone } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 
 const Contact = () => {
- const contact_info = [
-  { logo: "mail-outline", text: "kiranpawar6519@gmail.com" },
-  { logo: "call-outline", text: "+91 9617617648" },
-  { logo: "location-outline", text: "Indore-452001 M.P, India" },
+const contact_info = [
+  { icon: <MdEmail />, text: "kiranpawar6519@gmail.com" },
+  { icon: <FaPhone />, text: "+91 9617617648" },
+  { icon: <FaLocationDot />, text: "Indore-452001 M.P, India" },
 ];
+
 
   const [formData, setFormData] = useState({
     name: "",
@@ -108,21 +112,20 @@ const Contact = () => {
 
           {/* CONTACT INFO */}
           <div className="flex flex-col gap-7">
-            {contact_info.map((contact, i) => (
-              <div
-                key={i}
-                className="flex text-left gap-4 items-center"
-              >
-                <div className="min-w-[3.5rem] text-3xl min-h-[3.5rem] flex items-center justify-center text-white bg-cyan-600 rounded-full">
-                  {/* ✅ FIXED ICON */}
-                  <ion-icon name={contact.logo}></ion-icon>
-                </div>
-                <p className="md:text-base text-sm break-words">
-                  {contact.text}
-                </p>
-              </div>
-            ))}
-          </div>
+  {contact_info.map((contact, i) => (
+    <div
+      key={i}
+      className="flex text-left gap-4 items-center"
+    >
+      <div className="min-w-[3.5rem] text-3xl min-h-[3.5rem] flex items-center justify-center text-white bg-cyan-600 rounded-full">
+        {contact.icon}
+      </div>
+      <p className="md:text-base text-sm break-words">
+        {contact.text}
+      </p>
+    </div>
+  ))}
+</div>
 
         </div>
       </div>

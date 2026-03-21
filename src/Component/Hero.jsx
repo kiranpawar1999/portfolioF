@@ -7,9 +7,9 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 
 const social_links = [
-  { icon: <FaGithub />, link: "https://github.com/your-username" },
-  { icon: <FaLinkedin />, link: "https://linkedin.com/in/your-profile" },
-  { icon: <FaInstagram />, link: "https://instagram.com/your-id" },
+  { icon: <FaGithub />, link: "https://github.com/kiranpawar1999" },
+  { icon: <FaLinkedin />, link: "www.linkedin.com/in/kiran-pawar-9a891214a" },
+  { icon: <FaInstagram />, link: "https://www.instagram.com/kiru_6599/" },
 ];
 
 <div className="flex gap-5 mt-5">

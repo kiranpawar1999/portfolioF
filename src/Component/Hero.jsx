@@ -8,7 +8,7 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const social_links = [
   { icon: <FaGithub />, link: "https://github.com/kiranpawar1999" },
-  { icon: <FaLinkedin />, link: "www.linkedin.com/in/kiran-pawar-9a891214a" },
+  { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/kiran-pawar-9a891214a" },
   { icon: <FaInstagram />, link: "https://www.instagram.com/kiru_6599/" },
 ];
 
